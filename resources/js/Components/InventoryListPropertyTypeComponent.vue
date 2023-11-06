@@ -1,0 +1,31 @@
+<template>
+    <div class="">
+        <span
+            v-if="data.propertyType"
+            class="flex text-base font-bold leading-none uppercase text-darkone mt-1"
+        >
+            {{ data.propertyType.name }}</span
+        >
+    </div>
+</template>
+
+<script>
+import { defineComponent } from "vue";
+import AppLayout from "@/Layouts/AppLayout.vue";
+import Welcome from "@/Jetstream/Welcome.vue";
+import { Head, Link } from "@inertiajs/inertia-vue3";
+import { format } from "date-fns";
+export default defineComponent({
+    components: {
+        Head,
+        Link,
+        AppLayout,
+        format,
+    },
+    props: ["data", "errors"],
+    data() {
+        return {};
+    },
+    setup() {},
+});
+</script>

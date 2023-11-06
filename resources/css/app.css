@@ -1,0 +1,382 @@
+@import "https://use.typekit.net/fij1mid.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "theme-log.css";
+
+/* Layout */
+
+/* Menu */
+#menu-trigger {
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+#menu-trigger.collapsed {
+    padding-left: 40px;
+}
+#menu.collapsed:hover #menu-trigger {
+    padding-left: 290px;
+}
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 290px;
+    transition: all ease 0.3s;
+    z-index: 100;
+    overflow-y: scroll;
+}
+#menu.collapsed {
+    width: 77px;
+    transition: all ease 0.3s;
+    box-shadow: none;
+}
+#menu.collapsed:hover {
+    width: 290px;
+    box-shadow: 0px 81px 16px -12px #000;
+}
+#menu .title,
+#menu .heading {
+    opacity: 1;
+    transition: all ease 0.3s;
+}
+#menu.collapsed .title,
+#menu.collapsed .heading {
+    opacity: 0;
+}
+#menu.collapsed:hover .title,
+#menu.collapsed:hover .heading {
+    opacity: 1;
+}
+
+/* Content */
+
+#content {
+    width: 100%;
+    padding-left: 290px;
+    transition: all ease 0.3s;
+    position: relative;
+}
+#content.collapsed {
+    width: 100%;
+    padding-left: 76px;
+}
+
+/* Content Navigation */
+#contentNav {
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+/* Content Main */
+#contentMain {
+    min-height: 100vh;
+    /* padding-top: 48px; */
+}
+
+@media screen and (max-width: 768px) {
+    /* Menu */
+    #menu {
+        left: -100%;
+    }
+    #menu-trigger.collapsed {
+        padding-left: 1em;
+    }
+    #menu.collapsed {
+        left: 0;
+        display: block;
+        width: 85%;
+        transition: all ease 0.3s;
+        box-shadow: none;
+        overflow-y: scroll;
+        width: 80%;
+        box-shadow: 0px 81px 16px -12px #000;
+    }
+    #menu .title,
+    #menu .heading {
+        opacity: 1;
+        transition: all ease 0.3s;
+    }
+    #menu.collapsed .title,
+    #menu.collapsed .heading {
+        opacity: 1;
+    }
+    #menu.collapsed:hover .title,
+    #menu.collapsed:hover .heading {
+        opacity: 1;
+    }
+    #menu.collapsed:hover {
+        width: 80%;
+        box-shadow: 0px 81px 16px -12px #000;
+    }
+    #menu.collapsed:hover #menu-trigger {
+        padding-left: 0;
+    }
+
+    /* Content */
+    #content {
+        width: 100%;
+        padding-left: 0;
+        transition: all ease 0.3s;
+        position: relative;
+    }
+    #content.collapsed {
+        width: 100%;
+        padding-left: 0;
+    }
+    .logo-mobile img {
+        height: 38px;
+        padding-top: 8px;
+    }
+}
+
+/* Gradient main */
+.gradientMain {
+    background: linear-gradient(230deg, #40c9da, #3ea6b4, #35d4b2);
+    background-size: 600% 600%;
+
+    -webkit-animation: GradientAnimation 20s ease infinite;
+    -moz-animation: GradientAnimation 20s ease infinite;
+    -o-animation: GradientAnimation 20s ease infinite;
+    animation: GradientAnimation 20s ease infinite;
+}
+.gradientMain-fast {
+    background: linear-gradient(230deg, #2bb7cc, #35cfd4, #40c9da);
+    background-size: 600% 600%;
+
+    -webkit-animation: GradientAnimation 7s ease infinite;
+    -moz-animation: GradientAnimation 7s ease infinite;
+    -o-animation: GradientAnimation 7s ease infinite;
+    animation: GradientAnimation 7s ease infinite;
+}
+.gradientBlack-fast {
+    background: linear-gradient(230deg, #364350, #52677c, #374345);
+    background-size: 600% 600%;
+
+    -webkit-animation: GradientAnimation 7s ease infinite;
+    -moz-animation: GradientAnimation 7s ease infinite;
+    -o-animation: GradientAnimation 7s ease infinite;
+    animation: GradientAnimation 7s ease infinite;
+}
+.gradientBlack-static {
+    background: #293547;
+}
+.gradientGray {
+    background: linear-gradient(228deg, #e5eaea, #fbfbfb, #ebf1f2);
+}
+
+/* Datatable */
+.p-datatable-wrapper,
+.p-datatable-wrapper .p-component,
+.p-datatable-wrapper input.form-control {
+    font-family: "proxima-nova", ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.p-datatable.p-component .p-datatable-tbody > tr > td {
+    /* width: 12.5%; */
+}
+
+/* Table Head */
+.p-datatable.p-component .p-datatable-header {
+    background: #293547;
+    color: #fff;
+    border: 1px solid #e9ecef;
+    border-width: 1px 0 1px 0;
+    padding: 1rem 1rem;
+    font-weight: 600;
+    border: 1px solid #262728;
+}
+.p-datatable.p-component .p-datatable-thead {
+    background: #293547;
+}
+.p-datatable.p-component .p-datatable-thead > tr > th {
+    background: transparent;
+}
+
+.p-datatable .p-column-title,
+.p-datatable .p-sortable-column .p-column-title,
+.p-datatable .p-sortable-column .p-sortable-column-icon,
+.p-datatable .p-sortable-column .p-sortable-column-badge {
+    color: #fff;
+}
+.p-datatable.p-component .p-sortable-column:not(.p-highlight):hover,
+.p-datatable.p-component .p-sortable-column.p-highlight:hover {
+    background: #4e5962;
+}
+.p-datatable.p-component .p-sortable-column:focus {
+    box-shadow: none;
+    outline: 0 none;
+}
+
+/* Status */
+.status-badge {
+    border-radius: 2px;
+    padding: 0.25em 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+.status-badge.dash {
+    border-radius: 2px;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    margin-right: 8px;
+    text-align: center;
+    min-width: 170px;
+    display: block;
+}
+.status-badge.large {
+    font-size: 14px;
+    padding: 8px;
+}
+.status-badge.red {
+    background-color: #ffcdd2;
+    color: #c63737;
+}
+.status-badge.yellow {
+    background-color: #ffd8b2;
+    color: #805b36;
+}
+.status-badge.green {
+    background-color: #c8e6c9;
+    color: #256029;
+}
+.status-badge.blue {
+    background-color: #b3e5fc;
+    color: #23547b;
+}
+.status-badge.purple {
+    background-color: #eccfff;
+    color: #694382;
+}
+.status-badge.gray {
+    background-color: #eee;
+    color: #444;
+}
+.status-badge.black {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Icons */
+.p-datatable.p-component
+    .p-sortable-column:not(.p-highlight):hover
+    .p-sortable-column-icon {
+    color: #49c0cf;
+}
+.p-datatable.p-component .p-sortable-column .p-sortable-column-icon {
+    color: #ffffff;
+    margin-left: 0.5rem;
+    font-size: 0.8em;
+}
+.p-datatable.p-component
+    .p-sortable-column.p-highlight
+    .p-sortable-column-icon {
+    color: #49c0cf;
+    font-size: 1.2em;
+}
+/* Row hover */
+.p-datatable.p-datatable-hoverable-rows
+    .p-datatable-wrapper
+    .p-datatable-tbody
+    > tr:hover {
+    /* background: #fafafa !important; */
+    background: linear-gradient(228deg #fbfbfb, #ebf1f2) !important;
+    /* box-shadow: inset 0px 0px 33px -21px #404040; */
+    color: #495057;
+    cursor: pointer;
+}
+
+/* Pagination */
+.p-datatable.p-component .p-paginator .p-paginator-current {
+    background-color: transparent;
+    border: 0 none;
+    color: #6c757d;
+    min-width: 2.357rem;
+    height: 2.357rem;
+    margin: 0.143rem;
+    padding: 0 0.5rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75em;
+    margin-top: 1.5em;
+}
+
+/* Rows */
+.status-row {
+    min-width: 180px;
+}
+
+/* Nav div */
+.navDiv {
+    cursor: pointer;
+}
+
+@-webkit-keyframes GradientAnimation {
+    0% {
+        background-position: 0% 15%;
+    }
+    50% {
+        background-position: 100% 86%;
+    }
+    100% {
+        background-position: 0% 15%;
+    }
+}
+@-moz-keyframes GradientAnimation {
+    0% {
+        background-position: 0% 15%;
+    }
+    50% {
+        background-position: 100% 86%;
+    }
+    100% {
+        background-position: 0% 15%;
+    }
+}
+@-o-keyframes GradientAnimation {
+    0% {
+        background-position: 0% 15%;
+    }
+    50% {
+        background-position: 100% 86%;
+    }
+    100% {
+        background-position: 0% 15%;
+    }
+}
+@keyframes GradientAnimation {
+    0% {
+        background-position: 0% 15%;
+    }
+    50% {
+        background-position: 100% 86%;
+    }
+    100% {
+        background-position: 0% 15%;
+    }
+}
+
+/* Page transitions */
+/* .fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+} */
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0.1;
+    transform: translate(10px);
+}

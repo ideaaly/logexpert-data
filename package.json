@@ -1,0 +1,45 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@inertiajs/inertia": "^0.10.0",
+        "@inertiajs/inertia-vue3": "^0.5.2",
+        "@inertiajs/progress": "^0.2.6",
+        "@tailwindcss/forms": "^0.4.0",
+        "@tailwindcss/typography": "^0.5.0",
+        "@vue/compiler-sfc": "^3.0.5",
+        "axios": "^0.25",
+        "browser-sync": "^2.27.9",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "postcss-import": "^12.0.1",
+        "tailwindcss": "^3.0.0",
+        "vue": "^3.0.5",
+        "vue-loader": "^16.1.2"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.8",
+        "apexcharts": "^3.35.4",
+        "autoprefixer": "10.4.5",
+        "chart.js": "^4.4.0",
+        "date-fns": "^2.28.0",
+        "jspdf": "^2.5.1",
+        "ngrx-uml": "^1.0.2",
+        "primeicons": "^5.0.0",
+        "primevue": "^3.12.5",
+        "v-calendar": "^3.0.0-alpha.8",
+        "vue-router": "^4.2.4",
+        "vue-toastification": "^2.0.0-rc.5",
+        "vue3-apexcharts": "^1.4.1"
+    }
+}
